@@ -16,6 +16,9 @@ $ git clone git@github.com:boolean-uk/boolean-uk-tdd-todo-app.git && cd boolean-
 $ npm ci # to install dependencies
 ```
 
+### Instructions
+1. Follow a test-driven development process. Start with creating a domain model, then write a test, and pass it by writing source code. Repeat until you've finished.
+
 ### Requirements
 
 You should be able to run this in your JS console (using your node REPL, or browser console). For any assumptions made, represent this in your domain model.
@@ -44,3 +47,8 @@ undefined
 > todoApp.showAll()
 [{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
 ```
+
+#### Further work
+
+- Recreate this app using an object-oriented approach (eg: using classes)
+- Add a user interface to this app so you can run this from the command line (don't worry about test-driving this once your unit tests for your app logic are passing)
