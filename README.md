@@ -11,6 +11,7 @@
 1. Fork this repository
 2. Clone your fork to your local machine (example command below, see note)
 3. Install project dependencies
+
 **NOTE: Replace `YOUR_GITHUB_USERNAME` with your github username if using the command below**
 ```sh
 $ git clone git@github.com:YOUR_GITHUB_USERNAME/boolean-uk-tdd-todo-app.git && cd boolean-uk-tdd-todo-app
