@@ -12,7 +12,7 @@
 2. Clone your fork to your local machine
 3. Install project dependencies
 ```sh
-$ git clone git@github.com:boolean-uk/boolean-uk-tdd-todo-app.git && cd boolean-uk-tdd-todo-app
+$ git clone git@github.com:[username]/tdd-todoList.git && cd ]/tdd-todoList
 $ npm ci # to install dependencies
 ```
 
@@ -34,21 +34,21 @@ You should be able to run this in your JS console (using your node REPL, or brow
 #### Example interactions
 ```sh
 $ node
-> const todoApp = require('./src/todoApp.js') // load your program into your REPL
+> const TodoList = require('./src/todoList.js') // load your program into your REPL
 undefined
-> todoApp.create("Do the laundry")
+> const todoList = new TodoList()
+> todoList.create("Do the laundry")
 {id: 1, text: "Do the laundry", status: "incomplete"}
-> todoApp.create("Make the bed")
+> todoList.create("Make the bed")
 {id: 2, text: "Make the bed", status: "incomplete"}
-> todoApp.setComplete(2)
+> todoList.setComplete(2)
 {id: 2, text: "Make the bed", status: "complete"}
-> todoApp.setComplete(3)
+> todoList.setComplete(3)
 "Todo item not found"
-> todoApp.showAll()
+> todoList.showAll()
 [{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
 ```
 
 #### Further work
 
-- Recreate this app using an object-oriented approach (eg: using classes)
 - Add a user interface to this app so you can run this from the command line (don't worry about test-driving this once your unit tests for your app logic are passing)
