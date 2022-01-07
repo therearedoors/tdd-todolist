@@ -9,10 +9,16 @@
 
 ### Quickstart
 1. Fork this repository
-2. Clone your fork to your local machine
+2. Clone your fork to your local machine (example command below, see note)
 3. Install project dependencies
+
+**NOTE: Replace `YOUR_GITHUB_USERNAME` with your github username if using the command below**
 ```sh
+<<<<<<< HEAD
 $ git clone git@github.com:[username]/tdd-todoList.git && cd ]/tdd-todoList
+=======
+$ git clone git@github.com:YOUR_GITHUB_USERNAME/boolean-uk-tdd-todo-app.git && cd boolean-uk-tdd-todo-app
+>>>>>>> 0287e58c69a7e385e6cdbc641ccaab59bcc4f684
 $ npm ci # to install dependencies
 ```
 
@@ -27,8 +33,8 @@ You should be able to run this in your JS console (using your node REPL, or brow
 - Show all todo items
 - Show only todo items that are incomplete
 - Show only todo items that are complete
-- Search for a todo item by its index and show it, or return a message saying it doesn’t exist
-- Remove a todo item by its index
+- Search for a todo item by its ID and show it, or return a message saying it doesn’t exist
+- Remove a todo item by its ID
 - Only show the first 20chars of a todo item text description when showing multiple todo items. When showing a single todo, show all the text description
 
 #### Example interactions
