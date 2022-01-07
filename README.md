@@ -3,7 +3,7 @@
 ## Todo App
 
 ### Learning Objectives
-- Setup and use a test framework to help test code
+- Use a test framework to help test code
 - Use the Red Green Refactor loop to develop code
 - Test-drive a program with multiple functions with unit tests
 
