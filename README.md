@@ -30,12 +30,13 @@ The `src/TodoList.js` files contains an empty class definition you can use as a 
 You should be able to run this in your JS console (using your node REPL, or browser console). For any assumptions made, represent this in your domain model.
 
 - Create a todo item that has an ID, text description, and starts off incomplete
-- Show all todo items
-- Show only todo items that are incomplete
-- Show only todo items that are complete
-- Search for a todo item by its ID and show it, or return a message saying it doesn’t exist
+- Get all todo items
+- Set a todo completed by its ID
+- Get only todo items that are incomplete
+- Get only todo items that are complete
+- Search and return a todo item by its ID, or return a message saying it doesn’t exist
 - Remove a todo item by its ID
-- Only show the first 20chars of a todo item text description when showing multiple todo items. When showing a single todo, show all the text description
+
 
 #### Example interactions
 ```sh
@@ -51,7 +52,7 @@ undefined
 {id: 2, text: "Make the bed", status: "complete"}
 > todoList.setComplete(3)
 "Todo item not found"
-> todoList.showAll()
+> todoList.getAll()
 [{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
 ```
 
