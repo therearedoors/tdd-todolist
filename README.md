@@ -18,7 +18,12 @@ $ npm ci # to install dependencies
 ```
 
 ### Instructions
-1. Follow a test-driven development process. Start with creating a domain model, then write a test, and pass it by writing source code. Repeat until you've finished.
+1. Implement the below requirements by following a test-driven development process. 
+2. Start by reviewing the requirements below and from these defining your domain model. You don't need to implement it in code at this point - just think through what objects you might need, what methods and properties they might have, and write that down.
+3. For each requirement below, write a single test and pass it by writing source code. Repeat until you have implemented all requirements.
+4. As you implement the requirements you may find your initial assumptions about your domain model change. This is completely fine and part of the TDD proccess.
+
+The `src/TodoList.js` files contains an empty class definition you can use as a starting point. An initial spec file is provided in `spec/TodoList.spec.js`. You should add your tests to this file.
 
 ### Requirements
 
