@@ -1,10 +1,10 @@
+const date = new Date
 class Todo {
-    constructor(str, num){
+    constructor(str, num, bool=false){
     this._id = num
-    this._text = str
-    this._status = false
+    this._text = str.trim()
+    this._isComplete = bool
     }
-
     get id(){
         return this._id
     }
@@ -13,9 +13,17 @@ class Todo {
         return this._text
     }
 
-    get status(){
-      return this._status
+    get isComplete(){
+      return this._isComplete
     }
+
+    get day(){
+        return date.getDay()
+    }
+
+    set isComplete(bool){
+        this._isComplete = bool
+    }  
 }
 
 module.exports = Todo
