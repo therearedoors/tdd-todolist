@@ -117,6 +117,7 @@ describe("TodoList", () => {
     // verify
     expect(result).toEqual(expected)
   })
+  /*
   it("gets todos for a certain day", () => {
     // set up
     const one = new Todo("Make some food!", 1)
@@ -131,6 +132,7 @@ describe("TodoList", () => {
     // verify
     expect(result).toEqual(expected)
   })
+  */
 }) 
 /*
 const TodoList = require("../src/TodoList.js")

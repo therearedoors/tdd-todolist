@@ -23,7 +23,7 @@ class Todo {
 
     set isComplete(bool){
         this._isComplete = bool
-    }  
+    }
 }
 
 module.exports = Todo
