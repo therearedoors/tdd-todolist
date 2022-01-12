@@ -99,17 +99,17 @@ describe("TodoList", () => {
   })
   it("deletes a todo item", () => {
     // set up
-    const expected = [new Todo("turn the heating on!",1)]
+    const expected = [new Todo("Make some food!",2)]
     // execute
     todoList.create("turn the heating on!")
     todoList.create("Make some food!")
-    const result = todoList.deleteTodo('2')
+    const result = todoList.deleteTodo(2)
     // verify
     expect(result).toEqual(expected)
   })
   it("returns error message for invalid input", () => {
     // set up
-    const expected = "invalid ID"
+    const expected = null
     // execute
     todoList.create("turn the heating on!")
     todoList.create("Make some food!")
@@ -134,41 +134,3 @@ describe("TodoList", () => {
   })
   */
 }) 
-/*
-const TodoList = require("../src/TodoList.js")
-const Todo = require("../src/Todo.js")
-
-describe("TodoList", () => {
-  let todoList
-
-  beforeEach(() => {
-    todoList = new TodoList()
-  })
-
-  it("creates a todo item", () => {
-    // set up
-    const expected = {
-      id: 1,
-      text: "turn the heating on!",
-      status: "incomplete"
-    }
-    const expected = new Todo("turn the heating on!", 1)
-    // execute
-    const result = todoList.create("turn the heating on!")
-    // verify
-    expect(result).toEqual(expected)
-  })
-
-  it("gets all todo items", () => {
-    // set up
-    const todoOne = new Todo("turn the heating on!", 1)
-    const todoTwo = new Todo("make the bed", 2)
-    const expected = [todoOne,todoTwo]
-    // execute
-    todoList.create("turn the heating on!")
-    todoList.create("make the bed")
-    const result = todoList.getAll()
-    // verify
-    expect(result).toEqual(expected)
-  })
-  */

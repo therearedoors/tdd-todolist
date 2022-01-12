@@ -1,13 +1,4 @@
 const Todo = require("../src/Todo.js")
-const days = {
-    0: "Sunday",
-    1: "Monday",
-    2: "Tuesday",
-    3: "Wednesday",
-    4: "Thursday",
-    5: "Friday",
-    6: "Saturday"
-    }
 class TodoList {
     constructor(){
     this.list = []
@@ -30,24 +21,23 @@ class TodoList {
     }
 
     getComplete() {
-        const output = []
-        for (let i = 0; i < this.list.length; i++) {
-            if (this.list[i].isComplete === true) {
-                output.push(this.list[i])
-            }
-        }
-        return output
+        return this.getStatus(true)
     }
 
     getIncomplete () {
+        return this.getStatus(false)
+    }
+
+    getStatus(status){
         const output = []
         for (let i = 0; i < this.list.length; i++) {
-        if (this.list[i]["isComplete"] === false) {
+        if (this.list[i]["isComplete"] === status) {
             output.push(this.list[i])
         }
         }
         return output
     }
+
 
     getTodo(id) {
         for (let i = 0; i < this.list.length; i++) {
@@ -58,25 +48,12 @@ class TodoList {
         return "Todo not found"
     }
 
-  //  getTodosForThisDay(day){
-  //      return this.list.filter(todo => days[`${todo['day']}`] === day)
-  //  }
-
 
     deleteTodo(id){
-        if (!this.list[id-1]){
+        if (!this.list[id-1]){          // needs fixing - currently will break if someone tries to 'get' todos by ID after some have been deleted, this could be fixed by using a for loop to find by id, instead of the id-1 hack used here.
             return null
         }
         return this.list.splice(id-1,1)
-        /*
-        const output = []
-        for(let i = 0; i < this.list.length; i++) {
-            if (this.list[i]['id'] !== parseInt(id)) {
-                output.push(this.list[i])
-            }
-        }
-        return output
-        */
     }
   }
   module.exports = TodoList
