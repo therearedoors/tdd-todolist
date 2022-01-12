@@ -58,15 +58,17 @@ class TodoList {
         return "Todo not found"
     }
 
-    getTodosForThisDay(day){
-        return this.list.filter(todo => days[`${todo['day']}`] === day)
-    }
+  //  getTodosForThisDay(day){
+  //      return this.list.filter(todo => days[`${todo['day']}`] === day)
+  //  }
 
 
     deleteTodo(id){
         if (!this.list[id-1]){
-            return "invalid ID"
+            return null
         }
+        return this.list.splice(id-1,1)
+        /*
         const output = []
         for(let i = 0; i < this.list.length; i++) {
             if (this.list[i]['id'] !== parseInt(id)) {
@@ -74,6 +76,7 @@ class TodoList {
             }
         }
         return output
+        */
     }
   }
   module.exports = TodoList
