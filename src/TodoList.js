@@ -48,12 +48,13 @@ class TodoList {
         return "Todo not found"
     }
 
-
     deleteTodo(id){
-        if (!this.list[id-1]){          // needs fixing - currently will break if someone tries to 'get' todos by ID after some have been deleted, this could be fixed by using a for loop to find by id, instead of the id-1 hack used here.
-            return null
+        for (let i = 0; i < this.list.length; i++) {
+            if (this.list[i]['id'] == id) {
+                return this.list.splice(i)
+            }
         }
-        return this.list.splice(id-1,1)
+        return null
     }
   }
   module.exports = TodoList
